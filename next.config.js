@@ -1,37 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  reactStrictMode: true,
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'links.papareact.com',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'upload.wikimedia.org',
-        pathname: '/**',
-      }
-    ],
-    formats: ['image/webp'],
+    unoptimized: true,
   },
-  webpack: (config) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': __dirname,
-    }
-    return config
-  },
-  typescript: {
-    ignoreBuildErrors: false,
-  },
-}
+  basePath: '/Airbnb-using-Next.js',
+};
 
-module.exports = nextConfig 
+module.exports = nextConfig;
