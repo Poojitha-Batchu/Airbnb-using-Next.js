@@ -4,6 +4,7 @@
 import { useState, useEffect } from "react";
 import { X, Send } from "lucide-react";
 import Image from "next/image";
+import chatbotImage from '../public/images/chatbot.png';
 
 interface Message {
   text: string;
@@ -103,7 +104,7 @@ const ChatBot = () => {
           onClick={() => setOpen(true)}
         >
           <Image 
-            src= "/images/chatbot.png"
+            src= {chatbotImage}
             alt="Chat Bot" 
             width={60} 
             height={60}
