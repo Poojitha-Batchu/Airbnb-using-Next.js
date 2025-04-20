@@ -1,6 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import favicon from '@/public/images/favicon.ico'
+import favicon from '/public/images/favicon.ico'
 
 const inter = Inter({ subsets: ['latin'] })
 
