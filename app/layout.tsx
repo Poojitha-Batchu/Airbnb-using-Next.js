@@ -1,5 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import favicon from '@/public/images/favicon.ico'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -7,7 +8,7 @@ export const metadata = {
   title: 'Airbnb Clone',
   description: 'A clone of the Airbnb website',
   icons: {
-    icon: '@/public/images/favicon.ico',
+    icon: {favicon},
   },
 }
 
