@@ -4,7 +4,6 @@
 import { useState, useEffect } from "react";
 import { X, Send } from "lucide-react";
 import Image from "next/image";
-import chatbotImage from "@/public/images/chatbot.png";
 
 interface Message {
   text: string;
@@ -17,6 +16,7 @@ const ChatBot = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [typing, setTyping] = useState(false);
   const [userInput, setUserInput] = useState("");
+  const chatbotImage = "/images/chatbot.png";
 
   const responses = [
     {
