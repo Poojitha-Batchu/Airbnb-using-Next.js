@@ -198,7 +198,6 @@
 //     </div>
 //   )
 // }
-
 // export default Carousel 
 
 'use client'
@@ -254,6 +253,19 @@ const Carousel: React.FC<CarouselProps> = ({
     setIsFavorite(!isFavorite)
   }
 
+  // Adjust image paths for GitHub Pages deployment
+  const getImagePath = (imagePath: string) => {
+    // If image path already starts with a URL (http/https), don't modify it
+    if (imagePath.startsWith('http')) {
+      return imagePath
+    }
+    
+    // If image is using a relative path, prepend the basePath
+    // Make sure the path starts with a slash
+    const normalizedPath = imagePath.startsWith('/') ? imagePath : `/${imagePath}`
+    return `/Airbnb-using-Next.js${normalizedPath}`
+  }
+
   return (
     <div 
       className="relative group cursor-pointer top-16"
@@ -262,7 +274,7 @@ const Carousel: React.FC<CarouselProps> = ({
     >
       <div className="relative aspect-square overflow-hidden rounded-xl">
         <Image
-          src={images[currentIndex]}
+          src={getImagePath(images[currentIndex])}
           alt={title}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
@@ -401,4 +413,5 @@ const Carousel: React.FC<CarouselProps> = ({
     </div>
   )
 }
-export default Carousel 
+
+export default Carousel
