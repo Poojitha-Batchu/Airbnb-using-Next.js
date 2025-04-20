@@ -2,7 +2,7 @@
 const nextConfig = {
   output: 'export',
   basePath: process.env.NODE_ENV === 'production' ? '/Airbnb-using-Next.js' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/your-repo-name/' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/Airbnb-using-Next.js/' : '',
   images: {
     unoptimized: true,
   }
