@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
-import logo from '@/public/assets/images/logo.png'
+import logo from '@/public/images/logo.png'
 
 interface FormData {
   email: string
