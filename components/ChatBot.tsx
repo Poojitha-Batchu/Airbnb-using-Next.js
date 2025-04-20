@@ -103,7 +103,7 @@ const ChatBot = () => {
           onClick={() => setOpen(true)}
         >
           <Image 
-            src= "/public/images/chatbot.png"
+            src= "/images/chatbot.png"
             alt="Chat Bot" 
             width={60} 
             height={60}
