@@ -16,7 +16,6 @@ const ChatBot = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [typing, setTyping] = useState(false);
   const [userInput, setUserInput] = useState("");
-  const chatbotImage = "/images/chatbot.png";
 
   const responses = [
     {
@@ -104,7 +103,7 @@ const ChatBot = () => {
           onClick={() => setOpen(true)}
         >
           <Image 
-            src= {chatbotImage}
+            src= "/public/images/chatbot.png"
             alt="Chat Bot" 
             width={60} 
             height={60}
