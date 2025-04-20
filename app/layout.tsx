@@ -20,7 +20,7 @@ export const metadata = {
   title: 'Airbnb Clone',
   description: 'A clone of the Airbnb website',
   icons: {
-    icon: {getImagePath(images['favicon.ico'])},
+    icon: {getImagePath(images['/favicon.ico'])},
   },
 }
 
