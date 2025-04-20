@@ -356,7 +356,7 @@
 
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Carousel from './Carousel'
 import Image from 'next/image'
 
@@ -378,7 +378,7 @@ const PropertyGrid = () => {
   const [basePath, setBasePath] = useState('')
   
   // Set the base path after component mounts (client-side only)
-  useState(() => {
+  useEffect(() => {
     setBasePath(getBasePath())
   }, [])
   
