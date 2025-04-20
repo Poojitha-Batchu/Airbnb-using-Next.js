@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  basePath: process.env.NODE_ENV === 'production' ? '/Airbnb-using-Next.js' : '',
   images: {
     unoptimized: true,
-  },
-  basePath: '/Airbnb-using-Next.js',
+  }
 };
 
 module.exports = nextConfig;
